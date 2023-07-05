@@ -1,0 +1,23 @@
+### 全量同步分类表
+POST http://localhost:80/dataUtil/syncFullData?id=0&size=9000&type=2
+Accept: application/json
+
+### 全量同步字段表
+POST http://localhost:80/dataUtil/syncFullData?id=1000000&size=9000&type=1
+Accept: application/json
+
+###  中止同步
+POST http://localhost:80/dataUtil/syncFullData?id=0&size=0&type=0&stop=1
+Accept: application/json
+
+### 增量同步分类表（时间到秒）-Pro
+POST https://c.handday.com/gateway/saas-field-template/dataUtil/syncAddIndustryData?dateTime=1688521500&size=9000
+Accept: application/json
+Cookie: hdsaas=always
+authorization: Bearer b15c5398-48b6-4da1-a673-ff1d87900737
+
+### 增量同步字段表（时间到秒）-Pro
+POST https://c.handday.com/gateway/saas-field-template/dataUtil/syncAddTemplateData?dateTime=1688521500&size=9000
+Accept: application/json
+Cookie: hdsaas=always
+authorization: Bearer b15c5398-48b6-4da1-a673-ff1d87900737
